@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* ---------- Theme Variables ---------- */
+:root {
+  --text: #6b6375;
+  --bg: #ffffff;
+  --border: #e5e4e7;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+}
+
+/* ---------- Dark Mode ---------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --bg: #16171d;
+    --border: #2e303a;
+  }
+}
+
+/* ---------- Base Reset ---------- */
+body {
+  margin: 0;
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ---------- Layout ---------- */
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Typography (SAFE) ---------- */
+h1, h2 {
+  font-family: var(--heading);
+}
+
+/* ---------- Code Font ---------- */
+code {
+  font-family: var(--mono);
+}
